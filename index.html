@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <main class="main">
+      <div class="choice">
+        <div class="wrapper">
+          <div class="radio_group">
+            <input type="radio" name="choose" class="encrypt" checked />
+
+            <label for="choose">
+              <span class="encr">✍️</span>
+            </label>
+          </div>
+
+          <p class="choice-text">
+            Choose:
+            <br />
+            Encrypt or Decrypt
+          </p>
+
+          <div class="radio_group">
+            <input type="radio" name="choose" class="decrypt" />
+
+            <label for="choose">
+              <span class="decr">👨‍💻</span>
+            </label>
+          </div>
+        </div>
+      </div>
+
+      <div class="question">
+        <div class="message">
+          <form onsubmit="return false;">
+            <label for="usr-msg" class="question-label">
+              Then, fill in this field
+            </label>
+
+            <textarea
+              id="usr-msg"
+              cols="44"
+              rows="4"
+              class="user-message"
+              required></textarea>
+
+            <label for="usr-key" class="question-label">
+              And enter your key here
+            </label>
+
+            <input name="usr-key" type="text" class="user-key" required />
+
+            <button class="show-result">Show result</button>
+            <!-- <button class="copy-result">Copy result</button> -->
+            <div class="tooltip">
+              <button class="copy-result">
+                <span class="tooltiptext" id="myTooltip">Copy to clipboard</span>
+                Copy result
+                </button>
+              </div>
+          </form>
+        </div>
+      </div>
+
+      <div class="answer">
+        <div class="result">
+          <p class="result__message">
+            Here will be your message. Press the button!
+          </p>
+        </div>
+      </div>
+    </main>
+
+    <script src="/js/scrambler.js"></script>
+    <script src="/js/script.js"></script>
+  </body>
+</html>
